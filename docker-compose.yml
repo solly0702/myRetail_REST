@@ -1,0 +1,30 @@
+version: '3'
+services:
+  app:
+    build:
+      dockerfile: $PWD/docker/Dockerfile
+      context: $PWD/app
+    container_name: myRetailRESTfulService
+    restart: unless-stopped
+    ports:
+      - "3003:3003"
+    depends_on:
+      - db
+    networks:
+      - backend
+
+  db:
+    image: mongo:latest
+    hostname: retail_db
+    env_file:
+      - ./docker/.db_env
+    volumes:
+      - $PWD/app/init_db.js:/docker-entrypoint-initdb.d/init-db.js:ro
+    ports:
+      - 27017:27017
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge

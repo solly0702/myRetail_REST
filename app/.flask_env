@@ -1,0 +1,8 @@
+ENV=production
+SECRET_KEY=Dlgksthf0!
+DB_HOST=retail_db
+DB_PORT=27017
+DB_USER=root
+DB_PWD=pass
+DB_SOURCE=admin
+DB_NAME=myRetail
