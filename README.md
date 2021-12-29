@@ -1,4 +1,4 @@
-#### myRetail REST
+### myRetail REST
 
 ---
 
@@ -20,14 +20,14 @@ v1/redsky
 
 ---
 
-#### REQUIREMENTS
+### REQUIREMENTS
 
 * Python3.9
 * Docker
 
 ---
 
-#### INSTALLATION
+### INSTALLATION
 
 ```
 git clone git@github.com:solly0702/myRetail_REST.git
@@ -40,7 +40,7 @@ docker-compose up -d
 
 ---
 
-#### CONFIGURATION
+### CONFIGURATION
 
 ```
 # FLASK CONFIGURATION
@@ -64,7 +64,7 @@ MONGO_INITDB_ROOT_PASSWORD={db userpassword}
 
 ---
 
-#### TEST
+### TEST
 
 Unit test with pytest module. Test covers database model field and validation function.
 
